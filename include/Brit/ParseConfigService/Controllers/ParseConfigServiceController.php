@@ -275,8 +275,7 @@ class ParseConfigServiceController
 
                 $args = [
                     'configurationType' => $configurationType,
-                    'type' => $requestJson->type,
-                    'configurations' => $requestJson->configurations
+                    'type' => $requestJson->type
                 ];
 
                 $action = new PatchConfigurationTypeAction($app, $request, $args);
@@ -293,8 +292,7 @@ class ParseConfigServiceController
 
                 $args = [
                     'configurationFile' => $configurationFile,
-                    'path' => $requestJson->path,
-                    'configurations' => $requestJson->configurations
+                    'path' => $requestJson->path
                 ];
 
                 $action = new PatchConfigurationFileAction($app, $request, $args);
